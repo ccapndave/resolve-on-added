@@ -1,0 +1,24 @@
+{
+  "name": "resolve-on-added",
+  "version": "1.0.0",
+  "description": "A simple function that uses MutationObserver to resolve a Promise when a node appears",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccapndave/resolve-on-added.git"
+  },
+  "keywords": [
+    "mutationobserver",
+    "onadded",
+    "promise"
+  ],
+  "author": "Dave Keen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ccapndave/resolve-on-added/issues"
+  },
+  "homepage": "https://github.com/ccapndave/resolve-on-added#readme"
+}
