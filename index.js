@@ -1,12 +1,12 @@
-module.exports = (parent, id) => {
-  return new Promise((resolve, reject) => {
-    const observer = new MutationObserver((mutations) => {
+module.exports = function(parent, id) {
+  return new Promise(function(resolve, reject) {
+    const observer = new MutationObserver(function(mutations) {
       // Get an array of the added ids
-      const addedIds = mutations.reduce((acc, mutationRecord) => {
+      const addedIds = mutations.reduce(function(acc, mutationRecord) {
         const ids = Array
           .from(mutationRecord.addedNodes)
-          .filter(node => node && node.attributes && node.attributes.getNamedItem('id') !== null)
-          .map(node => node.attributes.getNamedItem('id').value);
+          .filter(function(node) { return node && node.attributes && node.attributes.getNamedItem('id') !== null; })
+          .map(function(node) { return node.attributes.getNamedItem('id').value; });
 
         return acc.concat(ids);
       }, []);
